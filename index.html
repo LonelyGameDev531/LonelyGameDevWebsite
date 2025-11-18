@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>LonelyGameDev</title>
+    
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="Resources/css/site.css">
+    
+        <link rel="icon" type="image/png" href="Resources/LogoIcon.ico" sizes="32x32">
+</head>
+
+<body>
+  <div class="page-container">
+  	
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark custom-navbar border-bottom">
+            <div class="container">
+        
+                <a class="navbar-brand" href="index.html">LonelyGameDev</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="WarpedHorizonsBlog.html">Warped Horizons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="UnnamedFPSGameBlog.html">Unnamed FPS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PastWork.html">Past work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="AboutMe.html">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacts.html">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+  	
+
+
+    <main class="content-wrap">
+        <big><big><big>Welcome</big></big></big>
+        <p>Here you'll find out more about me and my work, with links to see my latest ramblings or past projects. On the homepage i’ll describe each link in the layout and what you’ll find in them</p>
+       
+        <big><big><big>Blogs</big></big></big>
+        <p>Here you’ll find progress reports and technical ramblings of my main projects, to which there are two at the moment. The first being warped horizons, a space building game I was meant to release for 2025 steam next fest. But instead I accidentally refactored 80 percent of the project to the point where there’s no gameplay whatsoever. After the dateline I temporarily put this game on the backburner, so there are no blogs. The other game is an unnamed FPS, its history started out as a failed 7DFPS entry. Due to it’s small scale and simplistic nature, This is now my main project, I wanted something that I can work on for like 1 hour every day while I focus on life</p>
+       
+        <big><big><big>About me</big></big></big>
+        <p>I prefer not to speak about myself. But for what little I will speak, it will be written here</p>
+       
+        <big><big><big>Past projects</big></big></big>
+        <p>Old projects/Game jam entries that I might return to some day if this gamedev thing ever worked out. I have a lot of ideas, so it’s hard for me to keep focus and not constantly change my interests. This section also include links to play any of the games I released small bits of</p>
+       
+        <big><big><big>Contacts</big></big></big>
+        <p>Where to find me</p>
+       
+        <big><big><big>Privacy</big></big></big>
+       
+        <p id="randomText"></p>
+       
+        <script>
+               const names = [
+                   "David",
+                   "Delphine",
+                   "Dylan",
+                   "Sadie",
+                   "James",
+                   "Grace",
+                   "Ethan",
+                   "Emma",
+                   "Oliver",
+                   "Ruby",
+                   "Jack"
+               ];
+               const addresses = [
+                   "18°18′0″N 64°49′30″W",
+                   "455 E Pebble Rd Box 230453, Las Vegas, NV 89123",
+                   "68.22381350699716, 27.037342024844712",
+                   "13.022041950939995, 77.5953330482419",
+                   "72.25835916547582, -23.928833560037624",
+                   "-64.89623340153535, -62.869863528235264",
+                   "55°45′49″N 37°37′46″E",
+                   "20601 Bohemian Avenue, Monte Rio, California",
+                   "6969 Sneedvill, Taured",
+                   "33° 41′ 25″ N, 130° 33′ 30″ E",
+                   "40° 48′ 12″ N, 76° 20′ 30″ W"
+               ];
+               const Joke = [
+                    "Nice furaffinity posts you got there",
+                    "Okay bro, what the fuck are those instagram reels in your history?. Find god",
+                    "Enjoyed jerking off to that astolfo cosplayer?",
+                    "How as the femboy psyops been going?",
+                    "The porn in your history as made me quite confused, I'm quite uncomfortably erect right now", 
+                    "You spend way too much on gacha, it's not worth it", 
+                    "After going through your history, I must say you need better anime tastes, watch Patlabor", 
+                    "Look, I get your father left for milk 10 years ago. But spending 30 dollars on pink thigh highs ain't gonna help bro", 
+                    "Your dick pics are now mine"
+                 ];
+       
+               const randomNameIndex = Math.floor(Math.random() * names.length);
+               const randomAddressIndex = Math.floor(Math.random() * addresses.length);
+               const randomJokeIndex = Math.floor(Math.random() * Joke.length);
+       
+               document.getElementById('randomText').innerText = ("Hello " + names[randomNameIndex] + " at " + addresses[randomAddressIndex] + ". " + Joke[randomJokeIndex]);
+           </script>
+    </main>
+
+    <footer class="border-top footer">
+            <div class="container">
+                 &copy; 2025 - LonelyGameDev - <a href="Privacy.html">Privacy</a>
+            </div>
+    </footer>
+  </div>
+</body>

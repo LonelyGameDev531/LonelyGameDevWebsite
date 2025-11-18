@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'MainSiteFont', sans-serif;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    html { font-size: 32px; }
+}
+
+li::marker {
+    content: "";
+}
+
+/* ============================================================
+   2. PAGE LAYOUT (Sticky footer system)
+   ============================================================ */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+.footer {
+	background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* ============================================================
+   3. FONTS
+   ============================================================ */
+
+@font-face {
+    font-family: 'MainSiteFont';
+    src: url('../Graphics/Fonts/fs-pixel-sans-unicode-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'WarpedHorizonsFont';
+    src: url('../Graphics/Fonts/square_pixel-7.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FPSFont';
+    src: url('../Graphics/Fonts/dpcomic.ttf') format('truetype');
+}
+
+/* ============================================================
+   4. NAVBAR
+   ============================================================ */
+
+.custom-navbar {
+    background-color: #000 !important; /* pure black */
+}
+
+.custom-navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.custom-navbar .nav-link {
+    color: #0d6efd !important; /* blue links */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #fff !important; /* white on hover */
+}
+
+/* Optional: Make the toggler icon visible on black navbars */
+.navbar-dark .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* ============================================================
+   5. BUTTONS & FORM ELEMENTS
+   ============================================================ */
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Old ASP.NET primary button colors (optional to keep) */
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Nav pills (if you use any) */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* ============================================================
+   6. BLOG PAGE THEMES
+   ============================================================ */
+
+/* ------ Warped Horizons Blog ------ */
+.blog-container.WarpedHorizonsBlog {
+	display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+	
+    background-color: black;
+    background-image: url("../Graphics/Background/StarField1.png");
+    background-repeat: repeat;
+    background-size: 10% auto;
+    image-rendering: pixelated;
+    color: green;
+    font-family: 'WarpedHorizonsFont', sans-serif;
+}
+
+/* ------ FPS Game Blog ------ */
+.blog-container.FPSGameBlog {
+	display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+	
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
+        url("../Graphics/Background/BrickTexture1.png");
+    background-repeat: repeat;
+    background-size: 10% auto;
+    image-rendering: pixelated;
+    color: white;
+    font-family: 'FPSFont', sans-serif;
+}
+
+/* ============================================================
+   7. BORDERS / UTILITIES
+   ============================================================ */
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
