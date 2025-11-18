@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+li::marker {
+    content: "";
+}
+
+@font-face {
+    font-family: 'MainSiteFont';
+    src: url('../Graphics/Fonts/fs-pixel-sans-unicode-regular.ttf') format('truetype');
+}
+
+body {
+    margin-bottom: 30px;
+    background-color: black;
+    text-align: center;
+    color: white; /* global default */
+    font-family: 'MainSiteFont', sans-serif;
+}
