@@ -146,6 +146,23 @@ li::marker {
     font-family: 'FPSFont', sans-serif;
 }
 
+/* ------ Pulverizer Blog ------ */
+.blog-container.PulverizerBlog {
+	display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+	
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
+        url("../Graphics/Background/Floor20000.png");
+    background-repeat: repeat;
+    background-size: 10% auto;
+    image-rendering: pixelated;
+    color: white;
+    font-family: 'WarpedHorizonsFont', sans-serif;
+}
+
+
 /* ============================================================
    7. BORDERS / UTILITIES
    ============================================================ */
