@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <title>LonelyGameDev</title>
+    
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="../Resources/css/site.css">
+    
+        <link rel="icon" type="image/png" href="../Resources/LogoIcon.ico" sizes="32x32">
+</head>
+
+<body>
+  <div class="page-container">
+	
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark custom-navbar border-bottom">
+        <div class="container">
+    
+            <a class="navbar-brand" href="../index.html">LonelyGameDev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../WarpedHorizonsBlog.html">Warped Horizons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../PulverizerBlog.html">Pulverizer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../PastWork.html">Past work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../AboutMe.html">About me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Contacts.html">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+	
+    
+    <main class="blog-container PulverizerBlog">
+	    <h1>Progress</h1>
+		<img src="../Resources/Graphics/PulverizerBlog/Levelconcept.png"
+             alt="Fixed Size Image"
+             style="max-width:100%;"/>
+        <br>
+		
+		<p>My burns taught me alot and I was able to make good use of them. Reading the document sped everything up and I would've likely gotten a massive headstart if I did that in the first place. Anyway I fixed many issues with Collision layers, with this I was able to have working Doors, Enemies taking damage, and the spawning of enemies. I started the goal of having a working weapon system with switching, reloading, clips, etc. It was at this moment I realized how complicated I made the combat. Aside from melee and guns, there are shotguns, akimbo guns, all kind of variables for shooting. I sorta realized that I might not add everything so I change my plans from a conversion to a slow addition of features, only add what's nessacary. That means I need a bare bones game. After I got the UI to work with weapon switching and reloads, I worked on weapon drops</p>
+		<img src="../Resources/Graphics/PulverizerBlog/WeaponSpinning.gif"
+             alt="Fixed Size Image"
+             style="max-width:50%;  margin-left: auto;
+  margin-right: auto;"/>
+	    <br>
+	    <p>Mainly I needed this so Money can even work, you can drop money and earn it. This is the start of the loop, earn money from killing, spend money on guns and ammo, continue. Took a bit of effort to get the physics to work but it eventually did. </p>
+		<img src="../Resources/Graphics/PulverizerBlog/PathfindingECS.png"
+             alt="Fixed Size Image"
+             style="max-width:50%;  margin-left: auto;
+  margin-right: auto;"/>
+		<br>
+		<p>With the killing of enemies i'd thought to work to convert the old Pathfinding code from the original project, which I was able to do quite successfully. I was luckily smart enough to impledment from basic debugging that made refactoring doable. This made me overconfident and thought I could convert all the old AI behavior tree code and it made me realize just how difficult it is to have ECS work with anything hierarchical or involves children, trying different solutions didn't help</p>
+		<br>
+		<p>To take a break from this kinda mindfuck, I decided to work mostly on graphics theses past few weeks. Getting the tools working for converting 3D models into sprites, I also cleaned it up a bit. Back then there was multiple images for each angle. Now it's just 2 textures, Diffuse and Normal Maps. It records the animation, applies it horizontally before going down by one row</p>
+		<img src="../Resources/Graphics/PulverizerBlog/Diffusemap.png"
+             alt="Fixed Size Image"
+             style="max-width:50%;  margin-left: auto;
+  margin-right: auto;"/>
+		<br>
+		<p>I also begin the slow process of adding back the animatior, it turns out the SpriteRenderer double rendering on the server and client was a issue on my part because I didn't fully read the forums. It now works and I was able to get it to change sprites and have a working Doomguy looking at the mouse, through playing animations come later</p>
+		<br>
+		<p>I wanted to save the Animator specifically because I remember programming the prototype there was tons of issues getting it to sync up with the AI code, so I gave the AI a go again and it once again turned into a failure. To break from it I decided to work on a small detail I knew I needed, levels having multiple textures. Luckily I knew about submeshes so this was decently easy, except the transparent materials rendering on top of everything else. I dunno why that's happening. Anyway that made me realize another problem, I don't have a straight forward idea to how to texture the enviroment and how it should look. It sent me a bit on a fun research weekend finding references to housing, decor, materials, etc. This research phase was actually helped alot by AI</p>
+		<img src="../Resources/Graphics/PulverizerBlog/List.png"
+             alt="Fixed Size Image"
+             style="max-width:50%;  margin-left: auto;  margin-right: auto;"
+			 />
+        <br>
+		<br>
+		<p>Eventually at the last minute, today in fact. I had a idea for the AI. have the actual trees be normal C# classes with inheritances and have the Evaulate function run ECS code. The BehaviorTree component simply as a Index to the tree. And the System just evaluate that entity and the Index. There might be issues but one problem at a time. For now my main goal is to have a complete game loop, the spawning can be randomized, but it needs to have weapon buying, money and ammo, with more then one enemy. Slowly add to that and fix bugs</p>
+		<p>Note to self, buy more crunchy chicken food at Taco bell</p>
+    </main>
+    
+	
+	
+    <footer class="border-top footer">
+        <div class="container">
+             &copy; 2025 - LonelyGameDev - <a href="../Privacy.html">Privacy</a>
+        </div>
+    </footer>
+  </div>
+</body>
